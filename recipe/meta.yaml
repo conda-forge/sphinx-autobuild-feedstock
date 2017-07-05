@@ -1,6 +1,6 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "2f9262d7a35f80a18c3bcb03b2bf5a83f0a5e88b75ad922b3b1cee512c7e5cd2" %}
+{% set version = "0.7.0" %}
+{% set sha256 = "dee6bccd995cd9d699af002e6a35dde447fc6942ad7cefc82f28b366187684e8" %}
 
 package:
   name: {{ name|lower }}
