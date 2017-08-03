@@ -1,6 +1,6 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "2f9262d7a35f80a18c3bcb03b2bf5a83f0a5e88b75ad922b3b1cee512c7e5cd2" %}
+{% set version = "0.7.1" %}
+{% set sha256 = "66388f81884666e3821edbe05dd53a0cfb68093873d17320d0610de8db28c74e" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,6 @@ source:
 build:
   number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
-  skip: True  # [py>35]
   entry_points:
     - sphinx-autobuild=sphinx_autobuild:main
 
