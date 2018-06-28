@@ -14,12 +14,15 @@ Summary: Watch a Sphinx directory and rebuild the documentation when a change is
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/sphinx-autobuild-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sphinx-autobuild-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/sphinx-autobuild-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/sphinx-autobuild-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sphinx-autobuild/badges/version.svg)](https://anaconda.org/conda-forge/sphinx-autobuild)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sphinx-autobuild/badges/downloads.svg)](https://anaconda.org/conda-forge/sphinx-autobuild)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sphinx--autobuild-green.svg)](https://anaconda.org/conda-forge/sphinx-autobuild) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sphinx-autobuild.svg)](https://anaconda.org/conda-forge/sphinx-autobuild) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sphinx-autobuild.svg)](https://anaconda.org/conda-forge/sphinx-autobuild) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sphinx-autobuild.svg)](https://anaconda.org/conda-forge/sphinx-autobuild) |
 
 Installing sphinx-autobuild
 ===========================
