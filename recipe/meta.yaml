@@ -1,5 +1,5 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "0.7.1" %}
+{% set version = "2020.9.1" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 66388f81884666e3821edbe05dd53a0cfb68093873d17320d0610de8db28c74e
+  sha256: 4b184a7db893f2100bbd831991ae54ca89167a2b9ce68faea71eaa9e37716aed
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   entry_points:
     - sphinx-autobuild=sphinx_autobuild:main
@@ -48,7 +48,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.'
+  summary: Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
 
 
 extra:
