@@ -19,16 +19,12 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
+    - flit
 
   run:
-    - python
-    - watchdog >=0.7.1
-    - argh >=0.24.1
-    - pathtools >=0.1.2
-    - pyyaml >=3.10
-    - tornado >=3.2
-    - port-for >=0.3.1
+    - python >=3.6
+    - sphinx
     - livereload >=2.3.0
 
 test:
@@ -44,7 +40,7 @@ test:
     - pytest --pyargs sphinx_autobuild
 
 about:
-  home: https://github.com/GaretJax/sphinx-autobuild
+  home: https://github.com/executablebooks/sphinx-autobuild
   license: MIT
   license_family: MIT
   license_file: LICENSE
