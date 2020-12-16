@@ -34,10 +34,13 @@ test:
 
   imports:
     - sphinx_autobuild
+  
+  files:
+    - tests
 
   commands:
     - sphinx-autobuild --help
-    - pytest --pyargs sphinx_autobuild
+    - pytest tests
 
 about:
   home: https://github.com/executablebooks/sphinx-autobuild
