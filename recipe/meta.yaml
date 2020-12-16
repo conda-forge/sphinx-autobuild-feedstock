@@ -35,7 +35,7 @@ test:
   imports:
     - sphinx_autobuild
   
-  files:
+  source_files:
     - tests
 
   commands:
