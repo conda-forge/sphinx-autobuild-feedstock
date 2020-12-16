@@ -14,7 +14,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
   entry_points:
-    - sphinx-autobuild=sphinx_autobuild:main
+    - sphinx-autobuild=sphinx_autobuild.__main__:main
 
 requirements:
   host:
