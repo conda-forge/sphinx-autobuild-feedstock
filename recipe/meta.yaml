@@ -1,5 +1,5 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "2020.9.1" %}
+{% set version = "2021.3.14" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b184a7db893f2100bbd831991ae54ca89167a2b9ce68faea71eaa9e37716aed
+  sha256: de1ca3b66e271d2b5b5140c35034c89e47f263f2cd5db302c9217065f7443f05
 
 build:
   noarch: python
@@ -34,7 +34,7 @@ test:
 
   imports:
     - sphinx_autobuild
-  
+
   source_files:
     - tests
 
