@@ -52,5 +52,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/jupyter-book
     - jrderuiter
     - xhochy
