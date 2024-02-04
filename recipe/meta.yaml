@@ -18,37 +18,34 @@ build:
 
 requirements:
   host:
+    - python >=3.9
+    - flit-core >=3.7
     - pip
-    - python >=3.6
-    - flit
-
   run:
-    - python >=3.6
+    - python >=3.9
     - sphinx
-    - livereload >=2.3.0
+    - livereload
+    - colorama
 
 test:
-  requires:
-    - pytest
-    - mock
-
   imports:
     - sphinx_autobuild
-
+  commands:
+    - pip check
+    - sphinx-autobuild --help
+    - pytest tests
+  requires:
+    - pip
+    - pytest
+    - mock
   source_files:
     - tests
 
-  commands:
-    - sphinx-autobuild --help
-    - pytest tests
-
 about:
-  home: https://github.com/executablebooks/sphinx-autobuild
+  summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
+  dev_url: https://github.com/sphinx-doc/sphinx-autobuild
   license: MIT
-  license_family: MIT
-  license_file: LICENSE
-  summary: Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
-
+  license_file: LICENSE.rst
 
 extra:
   recipe-maintainers:
