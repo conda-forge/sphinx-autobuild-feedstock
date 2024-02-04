@@ -42,6 +42,7 @@ test:
     - tests
 
 about:
+  home: https://github.com/executablebooks/sphinx-autobuild
   summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
   dev_url: https://github.com/sphinx-doc/sphinx-autobuild
   license: MIT
