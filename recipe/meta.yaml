@@ -29,6 +29,7 @@ requirements:
     - sphinx
     - livereload
     - colorama
+    - watchfiles
 
 test:
   imports:
