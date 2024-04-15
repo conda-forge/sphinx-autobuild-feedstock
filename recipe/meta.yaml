@@ -1,5 +1,5 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "2024.2.4" %}
+{% set version = "2024.4.13" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: cb9d2121a176d62d45471624872afc5fad7755ad662738abe400ecf4a7954303
+  sha256: 1d023b3a11866a094cd55c8e5a68c155430c033d560f649c1c2bde818f1d8f1b
 
 build:
   noarch: python
@@ -22,10 +22,14 @@ requirements:
     - flit-core >=3.7
     - pip
   run:
+    - starlette >=0.35
+    - uvicorn >=0.25
+    - websockets >=11.0
     - python >=3.9
     - sphinx
     - livereload
     - colorama
+    - watchfiles
 
 test:
   imports:

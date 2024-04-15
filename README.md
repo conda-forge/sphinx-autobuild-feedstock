@@ -7,7 +7,9 @@ Home: https://github.com/executablebooks/sphinx-autobuild
 
 Package license: MIT
 
-Summary: Watch a Sphinx directory and rebuild the documentation when a change is detected. Also includes a livereload enabled web server.
+Summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
+
+Development: https://github.com/sphinx-doc/sphinx-autobuild
 
 Current build status
 ====================
