@@ -12,24 +12,23 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
   entry_points:
     - sphinx-autobuild=sphinx_autobuild.__main__:main
 
 requirements:
   host:
-    - python >=3.9
     - flit-core >=3.7
     - pip
+    - python >=3.9
   run:
-    - starlette >=0.35
-    - uvicorn >=0.25
-    - websockets >=11
+    - colorama >=0.4.6
     - python >=3.9
     - sphinx
-    - livereload
-    - colorama >=0.4.6
+    - starlette >=0.35
+    - uvicorn >=0.25
     - watchfiles >=0.20
+    - websockets >=11
 
 test:
   imports:
@@ -37,18 +36,18 @@ test:
   commands:
     - pip check
     - sphinx-autobuild --help
-    - pytest tests
+    - pytest -vv --color=yes --tb=long -k "not test_application"
   requires:
-    - pip
-    - pytest
+    - httpx
     - mock
+    - pip
+    - pytest >=6
   source_files:
     - tests
 
 about:
-  home: https://github.com/executablebooks/sphinx-autobuild
+  home: https://github.com/sphinx-doc/sphinx-autobuild
   summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
-  dev_url: https://github.com/sphinx-doc/sphinx-autobuild
   license: MIT
   license_file: LICENSE.rst
 
