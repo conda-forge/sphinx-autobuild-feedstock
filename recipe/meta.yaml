@@ -1,5 +1,5 @@
 {% set name = "sphinx-autobuild" %}
-{% set version = "2024.4.16" %}
+{% set version = "2024.9.3" %}
 
 package:
   name: {{ name }}
@@ -7,29 +7,28 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 1c0ed37a1970eed197f9c5a66d65759e7c4e4cba7b5a5d77940752bf1a59f2c7
+  sha256: 75929a5a92b932da8d29837406d6d973a927c456f30986a27f1f20b067897892
 
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
   entry_points:
     - sphinx-autobuild=sphinx_autobuild.__main__:main
 
 requirements:
   host:
-    - python >=3.9
     - flit-core >=3.7
     - pip
+    - python >=3.9
   run:
-    - starlette >=0.35
-    - uvicorn >=0.25
-    - websockets >=11
+    - colorama >=0.4.6
     - python >=3.9
     - sphinx
-    - livereload
-    - colorama
+    - starlette >=0.35
+    - uvicorn >=0.25
     - watchfiles >=0.20
+    - websockets >=11
 
 test:
   imports:
@@ -37,18 +36,18 @@ test:
   commands:
     - pip check
     - sphinx-autobuild --help
-    - pytest tests
+    - pytest -vv --color=yes --tb=long -k "not test_application"
   requires:
-    - pip
-    - pytest
+    - httpx
     - mock
+    - pip
+    - pytest >=6
   source_files:
     - tests
 
 about:
-  home: https://github.com/executablebooks/sphinx-autobuild
+  home: https://github.com/sphinx-doc/sphinx-autobuild
   summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
-  dev_url: https://github.com/sphinx-doc/sphinx-autobuild
   license: MIT
   license_file: LICENSE.rst
 
