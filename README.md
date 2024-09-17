@@ -3,13 +3,11 @@ About sphinx-autobuild-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinx-autobuild-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/executablebooks/sphinx-autobuild
+Home: https://github.com/sphinx-doc/sphinx-autobuild
 
 Package license: MIT
 
 Summary: Rebuild Sphinx documentation on changes, with live-reload in the browser.
-
-Development: https://github.com/sphinx-doc/sphinx-autobuild
 
 Current build status
 ====================
