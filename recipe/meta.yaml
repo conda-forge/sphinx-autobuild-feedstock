@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 248150f8f333e825107b6d4b86113ab28fa51750e5f9ae63b59dc339be951fb1
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install -vv --no-deps --no-build-isolation .
   entry_points:
     - sphinx-autobuild=sphinx_autobuild.__main__:main
@@ -20,10 +20,10 @@ requirements:
   host:
     - flit-core >=3.7
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - colorama >=0.4.6
-    - python >=3.9
+    - python >={{ python_min }}
     - sphinx
     - starlette >=0.35
     - uvicorn >=0.25
@@ -42,6 +42,7 @@ test:
     - mock
     - pip
     - pytest >=6
+    - python {{ python_min }}
   source_files:
     - tests
 
